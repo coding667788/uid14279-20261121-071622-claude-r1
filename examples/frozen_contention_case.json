@@ -1,0 +1,74 @@
+{
+  "case_id": "frozen_contention",
+  "slot_count": 4,
+  "inspectors": [
+    {
+      "id": "a1",
+      "team": "A",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "H"
+    },
+    {
+      "id": "b1",
+      "team": "B",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "H"
+    },
+    {
+      "id": "b2",
+      "team": "B",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "H"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "P",
+      "required_trainings": [
+        "t1"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "src": "H",
+      "dst": "P",
+      "cost": 1
+    },
+    {
+      "src": "P",
+      "dst": "H",
+      "cost": 1
+    }
+  ],
+  "windows": [
+    {
+      "id": "w1",
+      "checkpoint": "P",
+      "start_slot": 1,
+      "end_slot": 2,
+      "min_gap": 1
+    },
+    {
+      "id": "w2",
+      "checkpoint": "P",
+      "start_slot": 1,
+      "end_slot": 4,
+      "min_gap": 1
+    }
+  ],
+  "frozen_visits": [
+    {
+      "inspector": "b1",
+      "slot": 1,
+      "checkpoint": "P",
+      "window": "w1"
+    }
+  ]
+}

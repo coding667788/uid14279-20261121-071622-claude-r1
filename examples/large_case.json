@@ -1,0 +1,344 @@
+{
+  "case_id": "large10x12x12",
+  "slot_count": 12,
+  "inspectors": [
+    {
+      "id": "i01",
+      "team": "A",
+      "trainings": [
+        "t1",
+        "t3"
+      ],
+      "initial": "HUB"
+    },
+    {
+      "id": "i02",
+      "team": "B",
+      "trainings": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "initial": "HUB"
+    },
+    {
+      "id": "i03",
+      "team": "A",
+      "trainings": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "initial": "HUB"
+    },
+    {
+      "id": "i04",
+      "team": "B",
+      "trainings": [
+        "t1",
+        "t3"
+      ],
+      "initial": "HUB"
+    },
+    {
+      "id": "i05",
+      "team": "A",
+      "trainings": [
+        "t1",
+        "t3"
+      ],
+      "initial": "HUB"
+    },
+    {
+      "id": "i06",
+      "team": "B",
+      "trainings": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "initial": "HUB"
+    },
+    {
+      "id": "i07",
+      "team": "A",
+      "trainings": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "initial": "HUB"
+    },
+    {
+      "id": "i08",
+      "team": "B",
+      "trainings": [
+        "t1",
+        "t3"
+      ],
+      "initial": "HUB"
+    },
+    {
+      "id": "i09",
+      "team": "A",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "HUB"
+    },
+    {
+      "id": "i10",
+      "team": "B",
+      "trainings": [
+        "t1",
+        "t2"
+      ],
+      "initial": "HUB"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "c1",
+      "required_trainings": [
+        "t1"
+      ]
+    },
+    {
+      "id": "c2",
+      "required_trainings": [
+        "t1"
+      ]
+    },
+    {
+      "id": "c3",
+      "required_trainings": [
+        "t1",
+        "t2"
+      ]
+    },
+    {
+      "id": "c4",
+      "required_trainings": [
+        "t1",
+        "t2"
+      ]
+    },
+    {
+      "id": "c5",
+      "required_trainings": [
+        "t1",
+        "t2",
+        "t3"
+      ]
+    },
+    {
+      "id": "c6",
+      "required_trainings": [
+        "t1",
+        "t3"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "src": "HUB",
+      "dst": "c1",
+      "cost": 1
+    },
+    {
+      "src": "c1",
+      "dst": "HUB",
+      "cost": 1
+    },
+    {
+      "src": "HUB",
+      "dst": "c2",
+      "cost": 1
+    },
+    {
+      "src": "c2",
+      "dst": "HUB",
+      "cost": 1
+    },
+    {
+      "src": "HUB",
+      "dst": "c3",
+      "cost": 2
+    },
+    {
+      "src": "c3",
+      "dst": "HUB",
+      "cost": 2
+    },
+    {
+      "src": "c1",
+      "dst": "c3",
+      "cost": 1
+    },
+    {
+      "src": "c3",
+      "dst": "c1",
+      "cost": 1
+    },
+    {
+      "src": "c2",
+      "dst": "c4",
+      "cost": 1
+    },
+    {
+      "src": "c4",
+      "dst": "c2",
+      "cost": 1
+    },
+    {
+      "src": "HUB",
+      "dst": "c4",
+      "cost": 2
+    },
+    {
+      "src": "c4",
+      "dst": "HUB",
+      "cost": 2
+    },
+    {
+      "src": "c3",
+      "dst": "c5",
+      "cost": 1
+    },
+    {
+      "src": "c5",
+      "dst": "c3",
+      "cost": 1
+    },
+    {
+      "src": "c4",
+      "dst": "c6",
+      "cost": 1
+    },
+    {
+      "src": "c6",
+      "dst": "c4",
+      "cost": 1
+    },
+    {
+      "src": "HUB",
+      "dst": "c5",
+      "cost": 4
+    },
+    {
+      "src": "c5",
+      "dst": "HUB",
+      "cost": 4
+    },
+    {
+      "src": "HUB",
+      "dst": "c6",
+      "cost": 4
+    },
+    {
+      "src": "c6",
+      "dst": "HUB",
+      "cost": 4
+    }
+  ],
+  "windows": [
+    {
+      "id": "w00",
+      "checkpoint": "c1",
+      "start_slot": 1,
+      "end_slot": 2,
+      "min_gap": 1
+    },
+    {
+      "id": "w01",
+      "checkpoint": "c2",
+      "start_slot": 1,
+      "end_slot": 2,
+      "min_gap": 1
+    },
+    {
+      "id": "w02",
+      "checkpoint": "c3",
+      "start_slot": 2,
+      "end_slot": 3,
+      "min_gap": 1
+    },
+    {
+      "id": "w03",
+      "checkpoint": "c4",
+      "start_slot": 2,
+      "end_slot": 3,
+      "min_gap": 1
+    },
+    {
+      "id": "w04",
+      "checkpoint": "c5",
+      "start_slot": 3,
+      "end_slot": 4,
+      "min_gap": 1
+    },
+    {
+      "id": "w05",
+      "checkpoint": "c6",
+      "start_slot": 3,
+      "end_slot": 4,
+      "min_gap": 1
+    },
+    {
+      "id": "w06",
+      "checkpoint": "c1",
+      "start_slot": 9,
+      "end_slot": 10,
+      "min_gap": 1
+    },
+    {
+      "id": "w07",
+      "checkpoint": "c2",
+      "start_slot": 9,
+      "end_slot": 10,
+      "min_gap": 1
+    },
+    {
+      "id": "w08",
+      "checkpoint": "c3",
+      "start_slot": 10,
+      "end_slot": 11,
+      "min_gap": 1
+    },
+    {
+      "id": "w09",
+      "checkpoint": "c4",
+      "start_slot": 10,
+      "end_slot": 11,
+      "min_gap": 1
+    },
+    {
+      "id": "w10",
+      "checkpoint": "c5",
+      "start_slot": 11,
+      "end_slot": 12,
+      "min_gap": 1
+    },
+    {
+      "id": "w11",
+      "checkpoint": "c6",
+      "start_slot": 11,
+      "end_slot": 12,
+      "min_gap": 1
+    }
+  ],
+  "frozen_visits": [
+    {
+      "inspector": "i02",
+      "slot": 1,
+      "checkpoint": "c1",
+      "window": "w00"
+    },
+    {
+      "inspector": "i04",
+      "slot": 2,
+      "checkpoint": "c2",
+      "window": null
+    }
+  ]
+}

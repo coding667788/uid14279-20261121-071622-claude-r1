@@ -1,0 +1,107 @@
+{
+  "case_id": "tiny4x5",
+  "slot_count": 5,
+  "inspectors": [
+    {
+      "id": "i1",
+      "team": "A",
+      "trainings": [
+        "t1",
+        "t2"
+      ],
+      "initial": "H"
+    },
+    {
+      "id": "i2",
+      "team": "B",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "H"
+    },
+    {
+      "id": "i3",
+      "team": "A",
+      "trainings": [
+        "t1",
+        "t2"
+      ],
+      "initial": "H"
+    },
+    {
+      "id": "i4",
+      "team": "B",
+      "trainings": [
+        "t1",
+        "t2"
+      ],
+      "initial": "X"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "P",
+      "required_trainings": [
+        "t1"
+      ]
+    },
+    {
+      "id": "Q",
+      "required_trainings": [
+        "t1",
+        "t2"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "src": "H",
+      "dst": "P",
+      "cost": 1
+    },
+    {
+      "src": "P",
+      "dst": "H",
+      "cost": 1
+    },
+    {
+      "src": "P",
+      "dst": "Q",
+      "cost": 2
+    },
+    {
+      "src": "Q",
+      "dst": "P",
+      "cost": 2
+    },
+    {
+      "src": "X",
+      "dst": "P",
+      "cost": 1
+    }
+  ],
+  "windows": [
+    {
+      "id": "w1",
+      "checkpoint": "P",
+      "start_slot": 1,
+      "end_slot": 4,
+      "min_gap": 1
+    },
+    {
+      "id": "w2",
+      "checkpoint": "Q",
+      "start_slot": 3,
+      "end_slot": 5,
+      "min_gap": 1
+    }
+  ],
+  "frozen_visits": [
+    {
+      "inspector": "i2",
+      "slot": 1,
+      "checkpoint": "P",
+      "window": "w1"
+    }
+  ]
+}

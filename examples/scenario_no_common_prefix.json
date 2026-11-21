@@ -1,0 +1,107 @@
+{
+  "case_id": "scenario_no_common_prefix",
+  "slot_count": 5,
+  "inspectors": [
+    {
+      "id": "a1",
+      "team": "A",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "H"
+    },
+    {
+      "id": "a2",
+      "team": "A",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "H"
+    },
+    {
+      "id": "b1",
+      "team": "B",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "H"
+    },
+    {
+      "id": "b2",
+      "team": "B",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "H"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "P",
+      "required_trainings": [
+        "t1"
+      ]
+    },
+    {
+      "id": "R",
+      "required_trainings": [
+        "t1"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "src": "H",
+      "dst": "P",
+      "cost": 1
+    },
+    {
+      "src": "P",
+      "dst": "H",
+      "cost": 1
+    },
+    {
+      "src": "H",
+      "dst": "R",
+      "cost": 1
+    },
+    {
+      "src": "R",
+      "dst": "H",
+      "cost": 1
+    }
+  ],
+  "windows": [
+    {
+      "id": "w1",
+      "checkpoint": "R",
+      "start_slot": 1,
+      "end_slot": 2,
+      "min_gap": 1
+    },
+    {
+      "id": "w2",
+      "checkpoint": "P",
+      "start_slot": 4,
+      "end_slot": 5,
+      "min_gap": 1
+    }
+  ],
+  "frozen_visits": [],
+  "scenarios": [
+    {
+      "id": "eA",
+      "reveal_slot": 1,
+      "absent": [
+        "a1"
+      ]
+    },
+    {
+      "id": "eB",
+      "reveal_slot": 1,
+      "absent": [
+        "a2"
+      ]
+    }
+  ]
+}

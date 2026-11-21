@@ -1,0 +1,74 @@
+{
+  "case_id": "chain_trap",
+  "slot_count": 4,
+  "inspectors": [
+    {
+      "id": "a1",
+      "team": "A",
+      "trainings": [
+        "t1",
+        "t2"
+      ],
+      "initial": "S"
+    },
+    {
+      "id": "b1",
+      "team": "B",
+      "trainings": [
+        "t1",
+        "t2"
+      ],
+      "initial": "S"
+    },
+    {
+      "id": "b2",
+      "team": "B",
+      "trainings": [
+        "t1"
+      ],
+      "initial": "P"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "P",
+      "required_trainings": [
+        "t1"
+      ]
+    },
+    {
+      "id": "R",
+      "required_trainings": [
+        "t1",
+        "t2"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "src": "S",
+      "dst": "P",
+      "cost": 1
+    },
+    {
+      "src": "P",
+      "dst": "R",
+      "cost": 1
+    },
+    {
+      "src": "R",
+      "dst": "P",
+      "cost": 1
+    }
+  ],
+  "windows": [
+    {
+      "id": "w1",
+      "checkpoint": "R",
+      "start_slot": 2,
+      "end_slot": 3,
+      "min_gap": 2
+    }
+  ],
+  "frozen_visits": []
+}
